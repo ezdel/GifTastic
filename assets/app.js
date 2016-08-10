@@ -1,7 +1,7 @@
 var gifs = ['', 'steak', 'pizza', 'soup', 'eggs', 'hamburger', 'hot dog', 'candy', 'popcorn', 'soda', 'cheese', 'toast', 'sushi' ];
 function showGifs(){
 	var gifName = $(this).data('name');
-	var queryURL = 'http://api.giphy.com/v1/gifs/search?q=' + gifName + '&api_key=dc6zaTOxFJmzC&limit=10&offset=0';
+	var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + gifName + '&api_key=dc6zaTOxFJmzC&limit=10&offset=0';
 
 	$.ajax({url: queryURL, method: 'GET'})
 	.done(function(response){
