@@ -1,0 +1,31 @@
+body {
+	font-family: 'IM Fell English SC', serif;
+	background-color: #AEF8F7;
+	margin: 20px;
+	line-height: 28px;
+}
+header {
+	text-align: center;
+}
+
+.gifbtn {
+	margin: 5px;
+}
+
+#gif-form {
+	margin:	5px;
+}
+.col-md-4 {
+	font-size: 20px;
+	width: 200px;
+}	
+
+img {
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+}
+
+h4 {
+	margin-left: 25px;
+}

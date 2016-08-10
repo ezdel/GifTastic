@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GifTastic</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link href='https://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<audio autoplay="autoplay" src="assets/music/food.mp3"></audio>
+</head>
+<body>
+<header>
+	<h1>FOOD, GLOURIOUS FOOD</h1>
+	<h4>Click on a Food Type to See the GIFS.</h4>
+</header>
+<div id="buttonArea">
+</div>
+<form id="gif-form">
+	<label for="gif-input">Enter a Type of Food</label>
+	<input type="text" id="gif-input"><br>
+	<input id="addButton" type="submit" value="Add Food">
+</form>
+<div class="container" id="gifArea">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="assets/app.js"></script>
+</body>
+</html>
