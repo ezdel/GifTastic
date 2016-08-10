@@ -7,6 +7,9 @@ body {
 header {
 	text-align: center;
 }
+#music {
+	float: right;
+}
 
 .gifbtn {
 	margin: 5px;

@@ -1,4 +1,9 @@
 var gifs = ['', 'steak', 'pizza', 'soup', 'eggs', 'hamburger', 'hot dog', 'candy', 'popcorn', 'soda', 'cheese', 'toast', 'sushi' ];
+
+$('#music').on('click', function(){
+	$('#song').prop('muted', !$('#song').prop('muted'));
+});
+
 function showGifs(){
 	var gifName = $(this).data('name');
 	var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + gifName + '&api_key=dc6zaTOxFJmzC&limit=10&offset=0';
@@ -6,21 +11,13 @@ function showGifs(){
 	$.ajax({url: queryURL, method: 'GET'})
 	.done(function(response){
 		$('#gifArea').empty();
-		// $('.gifBlock').empty();
 		for (var i = 0; i < 10; i++){
-			// var gifBlock = $('<div>');
-			// gifBlock.addClass('gifBlock');
-			// $('#gifArea').append(gifBlock);
 			var imageURL = response.data[i].images.fixed_height_still.url;
 			var animateURL = response.data[i].images.fixed_height.url;
 			var stillURL = response.data[i].images.fixed_height_still.url;
 			var gifBlock = $('<div>');
 			gifBlock.addClass('col-md-4')
 			gifBlock.append('<h4>Rating: ' + response.data[i].rating + '<h4>');
-			
-			// var rating = $('<h4>Rating: ' + response.data[i].rating + '<h4>');
-			//rating.addClass('col-md-4');
-			//$('#gifArea').append(rating);
 			var gifImage = $('<img>');
 			gifImage.addClass('col-md-4');
 			gifImage.attr('src', imageURL);
@@ -28,15 +25,11 @@ function showGifs(){
 			gifImage.attr('data-still', stillURL);
 			gifImage.attr('data-state', 'still');
 			gifBlock.append(gifImage);
-			$('#gifArea').append(gifBlock);
-			
-				
-		};
-		
+			$('#gifArea').append(gifBlock);	
+		};		
 	});
-	
-
 };
+
 function renderButtons(){
 	$('#buttonArea').empty();
 	for (var i = 1; i < gifs.length; i++){
